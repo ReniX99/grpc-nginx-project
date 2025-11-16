@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package api;
+
+message User {
+    string name = 1;
+}
+
+message HelloMessage {
+    string message = 1;
+}
+
+service ApiService {
+    rpc SendMessage (User) returns (HelloMessage) {}
+}
